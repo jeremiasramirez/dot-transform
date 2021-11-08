@@ -1,5 +1,5 @@
 
-function dotTransform(data:Number) : any{
+function dotTransform(data:Number) : String{
     let lastData: String = String(data);
     
     // 1,000 = 4
