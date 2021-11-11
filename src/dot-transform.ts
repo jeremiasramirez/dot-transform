@@ -30,16 +30,23 @@ function dotTransform(data:Number) : String{
     else if(lastData.length == 9){
         lastData =lastData.substring(0,3)+","+lastData.substring(3,6) + ","+lastData.substring(6,9)
     }
-        //   1000.000.000
+        //   1.000.000.000
     else if(lastData.length == 10){
-        lastData =lastData.substring(0,4)+","+lastData.substring(4,7) + ","+lastData.substring(7,10)
+        lastData =lastData.substring(0,1)+","+lastData.substring(1,4) + ","+lastData.substring(4,7)+ ","+lastData.substring(7,10)
     }
-    
-    return lastData;
+//   50.000.000.000
+    else if(lastData.length == 11){
+        lastData =lastData.substring(0,2)+","+lastData.substring(2,6) + ","+lastData.substring(4,7)+ ","+lastData.substring(7,10)
+    }
+ 
+    // 150.000.000.000
+    else if(lastData.length == 12){
+        lastData =lastData.substring(0,3)+","+lastData.substring(3,6) + ","+lastData.substring(4,7)+ ","+lastData.substring(7,10)
+    }
+    else{
+        lastData="0";
+    }
+    return lastData.toString();
 
 }
- 
-
 export default dotTransform
- 
- 
